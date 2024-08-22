@@ -1,0 +1,2 @@
+@echo off
+powershell -Command "& {$charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()'; $password = ''; for ($i = 0; $i -lt 14; $i++) { $rand = Get-Random -Minimum 0 -Maximum $charset.Length; $password += $charset[$rand] }; $password | Out-File password.txt}"
